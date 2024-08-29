@@ -1,0 +1,2 @@
+# CRUD APPLICATION FOR PRODUCT USING SPRING BOOT
+This project will show you through the steps of building a  CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, and MySQL.
