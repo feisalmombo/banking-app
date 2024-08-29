@@ -1,2 +1,2 @@
-# CRUD APPLICATION FOR PRODUCT USING SPRING BOOT
-This project will show you through the steps of building a  CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, and MySQL.
+# BANKING APPLICATION
+A Banking Application using Spring Boot, Spring Data JPA (Hibernate), and MySQL would involve building a backend service that manages various banking operations such as account management, transactions, user authentication, and financial services. Other activitie for this applications manages this functionalities based on Creating a bank accouunt, Fetching account details and Making a deposit/Withdrawal. 
