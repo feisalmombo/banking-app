@@ -1,5 +1,7 @@
 package com.efetechltd.banking.controller;
 
+import java.util.Map;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,6 +34,15 @@ public class AccountController {
     @GetMapping("/{id}")
     public ResponseEntity<AccountDto> getAccountbyId(@PathVariable Long id) {
         AccountDto accountDto = accountService.getAccountById(id);
+        return ResponseEntity.ok(accountDto);
+    }
+
+    // Deposit REST API
+    public ResponseEntity<AccountDto> deposit(Long id,
+            Map<String, Double> request) {
+
+        Double amount = request.get("amount");
+        AccountDto accountDto = accountService.deposit(id, amount);
         return ResponseEntity.ok(accountDto);
     }
 }
