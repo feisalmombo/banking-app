@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,8 +39,9 @@ public class AccountController {
     }
 
     // Deposit REST API
-    public ResponseEntity<AccountDto> deposit(Long id,
-            Map<String, Double> request) {
+    @PutMapping("/{id}/deposit")
+    public ResponseEntity<AccountDto> deposit(@PathVariable Long id,
+            @RequestBody Map<String, Double> request) {
 
         Double amount = request.get("amount");
         AccountDto accountDto = accountService.deposit(id, amount);
