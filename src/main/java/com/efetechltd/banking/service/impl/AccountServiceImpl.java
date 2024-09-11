@@ -46,4 +46,9 @@ public class AccountServiceImpl implements AccountService {
         return AccountMapper.mapToAccountDto(savedAccount);
     }
 
+    @Override
+    public AccountDto withdraw(Long id, double amount) {
+        return null;
+    }
+
 }
