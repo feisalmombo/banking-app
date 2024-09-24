@@ -1,6 +1,7 @@
 package com.efetechltd.banking.service.impl;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -68,6 +69,10 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<AccountDto> getAllAccounts() {
+
+        List<Account> accounts = accountRepository.findAll();
+        accounts.stream().map((account) -> AccountMapper.mapToAccountDto(account))
+        .collect(Collectors.toList());
         return null;
     }
 
