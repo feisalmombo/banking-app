@@ -1,5 +1,6 @@
 package com.efetechltd.banking.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
@@ -56,5 +57,12 @@ public class AccountController {
         double amount = request.get("amount");
         AccountDto accountDto = accountService.withdraw(id, amount);
         return ResponseEntity.ok(accountDto);
+    }
+
+    // Get All Accounts REST API
+    @GetMapping
+    public ResponseEntity<List<AccountDto>> getAllAccounts() {
+        List<AccountDto> accounts = accountService.getAllAccounts();
+        return ResponseEntity.ok(accounts);
     }
 }
