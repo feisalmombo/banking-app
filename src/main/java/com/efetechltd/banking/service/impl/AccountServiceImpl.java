@@ -1,5 +1,7 @@
 package com.efetechltd.banking.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.efetechltd.banking.dto.AccountDto;
@@ -62,6 +64,11 @@ public class AccountServiceImpl implements AccountService {
         Account savedAccount = accountRepository.save(account);
 
         return AccountMapper.mapToAccountDto(savedAccount);
+    }
+
+    @Override
+    public List<AccountDto> getAllAccounts() {
+        return null;
     }
 
 }
