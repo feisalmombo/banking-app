@@ -65,4 +65,6 @@ public class AccountController {
         List<AccountDto> accounts = accountService.getAllAccounts();
         return ResponseEntity.ok(accounts);
     }
+
+    // Delete REST API
 }
