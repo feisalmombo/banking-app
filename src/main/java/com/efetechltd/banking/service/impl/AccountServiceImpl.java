@@ -75,4 +75,8 @@ public class AccountServiceImpl implements AccountService {
         .collect(Collectors.toList());
     }
 
+    @Override
+    public void deleteAccount(Long id) {
+    }
+
 }
