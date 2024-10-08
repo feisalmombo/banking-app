@@ -66,5 +66,5 @@ public class AccountController {
         return ResponseEntity.ok(accounts);
     }
 
-    // Delete REST API
+    // Delete Account REST API
 }
